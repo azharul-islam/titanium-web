@@ -2,6 +2,9 @@
     <div>
         <img src="../assets/box_air_frontview_transparent.png" alt="">
     </div>
+
+
+
 </template>
 
 <script>

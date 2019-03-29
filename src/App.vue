@@ -1,8 +1,14 @@
 <template>
   <div id="app">
+
+
+
     <img id="logo-main" alt="Titanium logo" src="./assets/logo.png">
     <Content/>
   </div>
+
+
+
 </template>
 
 <script>
