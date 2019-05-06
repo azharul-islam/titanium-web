@@ -1,9 +1,7 @@
 <template>
   <div id="app">
 
-
-
-    <img id="logo-main" alt="Titanium logo" src="./assets/logo.png">
+    <img id="logo-main" alt="Titanium logo" src="./assets/logo-black.png">
     <Content/>
   </div>
 
