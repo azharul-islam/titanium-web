@@ -5,10 +5,13 @@
             switched on
         </div>
         <img class="icon-header-sub" src="../assets/lightning.png"/>
-        <div class="header-text-sub" style="grid-column: 3/10;">{{electricitySaved}} kWh electricity saved</div>
+        <div class="header-text-sub" style="grid-column: 3/10;"><animated-number  :value="electricitySaved"
+                                                                                  :formatValue="formatToPrice"
+                                                                                  :duration="600"></animated-number> kWh electricity saved</div>
         <img class="icon-header-sub" src="../assets/clock.png"/>
-        <div class="header-text-sub" style="grid-column: 3/10;">{{bulbLife.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,
-            '$1,')}} more hours of light
+        <div class="header-text-sub" style="grid-column: 3/10;"><animated-number  :value="bulbLife"
+                                                                                  :formatValue="formatToPrice"
+                                                                                  :duration="600"></animated-number> more hours of light
         </div>
         <div class="header-text-sub linkified">Learn More</div>
 
@@ -41,6 +44,7 @@
     import {db} from '../main.js'
     import firebase from 'firebase'
     import {VueTyper} from 'vue-typer'
+    import AnimatedNumber from "animated-number-vue";
 
     export default {
         name: 'Header',
@@ -56,10 +60,10 @@
                 return this.bulbStat.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
             },
             electricitySaved: function () {
-                return (137.5 * this.bulbStat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+                return (137.5 * this.bulbStat)
             },
             bulbLife: function () {
-                return  (150000 * this.bulbStat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+                return  (150000 * this.bulbStat)
             },
 
         },
@@ -81,7 +85,7 @@
             }
         },
         components: {
-            VueTyper
+            VueTyper, AnimatedNumber
         },
         created: function () {
             db.collection("web-header").doc("bulbs")
@@ -89,6 +93,12 @@
                     this.bulbStat = doc.data().bulbStat
                 });
         },
+
+        methods: {
+            formatToPrice(value) {
+                return `${value.toFixed(0)}`.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            }
+        }
 
     }
 </script>
