@@ -1,7 +1,7 @@
 <template>
     <div class="about-section">
-<h1>About us</h1>
-        <p>saldfks;kfd</p>
+<h1>From our labs to you</h1>
+        <p>We put that extra attention on maximising light output for a given watt by</p>
     </div>
 
 

@@ -1,0 +1,15 @@
+{
+  "name": "Titanium Technologies BangladeshLtd.",
+  "short_name": "Titanium",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#0476F2",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "png"
+    }
+  ]
+}

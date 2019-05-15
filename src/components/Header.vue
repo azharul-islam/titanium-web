@@ -1,7 +1,7 @@
 <template>
     <div class="header-container">
         <img id="header-image" src="../assets/fireworks.png" alt="">
-        <div id="header-text-main"><span class="brand-highlight on-counter">{{bulbStat.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}}</span><br>
+        <div id="header-text-main"><span class="brand-highlight on-counter">{{bulbStatFormatted}}</span><br>
             switched on
         </div>
         <img class="icon-header-sub" src="../assets/lightning.png"/>
@@ -12,7 +12,7 @@
         </div>
         <div class="header-text-sub linkified">Learn More</div>
 
-        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 80px 60px auto; grid-gap: 10px; margin: 26px 0 0;">
+        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 80px 60px auto; grid-gap: 10px; margin: 20px 0 0;">
 
 
             <img v-show="!isBulbOn" class="bulb-image" src="../assets/bulb-off.png"
@@ -26,7 +26,9 @@
                 <input type="checkbox" v-model="isBulbOn">
                 <span class="slider round"></span>
             </label>
-            <div class="header-text-sub" style="grid-column: 3; padding: 0 0;">Switch on <vue-typer erase-style='clear' :text='["#bright","#durable","#affordable"]'></vue-typer>.
+            <div class="header-text-sub" style="grid-column: 3; padding: 0 0;">Switch on
+                <vue-typer erase-style='clear'
+                           :text='["#bright","#durable","#affordable"]'></vue-typer>.
             </div>
         </div>
 
@@ -38,6 +40,7 @@
 <script>
     import {db} from '../main.js'
     import firebase from 'firebase'
+    import {VueTyper} from 'vue-typer'
 
     export default {
         name: 'Header',
@@ -45,16 +48,18 @@
         data: function () {
             return {
                 bulbStat: 60786,
-                isBulbOn: false,
+                isBulbOn: false
             }
         },
         computed: {
-
+            bulbStatFormatted: function () {
+                return this.bulbStat.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+            },
             electricitySaved: function () {
-                return this.isBulbOn ? 1.4 : 1.2
+                return (137.5 * this.bulbStat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
             },
             bulbLife: function () {
-                return this.isBulbOn ? 260000 : 250000
+                return  (150000 * this.bulbStat).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
             },
 
         },
@@ -74,6 +79,9 @@
                 }
 
             }
+        },
+        components: {
+            VueTyper
         },
         created: function () {
             db.collection("web-header").doc("bulbs")
@@ -96,7 +104,7 @@
 
     #header-text-main {
         grid-column: 2/-1;
-        margin: -25px 0 10px;
+        margin: -55px 0 10px;
         font-family: Futura, serif;
         font-weight: bold;
         font-size: 30px;
@@ -134,7 +142,6 @@
         font-style: normal;
 
     }
-
 
 
     @font-face {
@@ -224,12 +231,9 @@
         border-radius: 50%;
     }
 
-    .vue-typer .custom.char.typed {
+    .typed {
         color: #42B152;
     }
 
-    .vue-typer .custom.caret {
-        display: none;
-    }
 
 </style>
