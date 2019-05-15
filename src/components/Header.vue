@@ -88,8 +88,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .header-container {
-        padding: 70px 0 0 0;
+        padding: 60px 0 0 0;
         display: grid;
+
         grid-template-columns: repeat(12, 1fr);
     }
 
@@ -120,10 +121,31 @@
 
     .header-text-sub {
         text-align: left;
-        font-family: "Product Sans", Arial, sans-serif;
+        font-family: 'Product Sans', Arial, sans-serif;
         font-weight: bold;
         margin: 8px 4px;
     }
+
+    @font-face {
+        font-family: 'product_sansbold';
+        src: url('../font/product_sans_bold-webfont.woff2') format('woff2'),
+        url('../font/product_sans_bold-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+
+
+    @font-face {
+        font-family: 'product_sansregular';
+        src: url('../font/product_sans_regular-webfont.woff2') format('woff2'),
+        url('../font/product_sans_regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
 
     .icon-header-sub {
         grid-column: 2/3;
