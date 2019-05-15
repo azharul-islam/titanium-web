@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <img src="../assets/box_air_frontview_transparent.png" alt="">
+    <div class="about-section">
+<h1>About us</h1>
+        <p>saldfks;kfd</p>
     </div>
 
 
@@ -16,16 +17,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.about-section {
+    background-color: #42B152;
+    color: white;
+}
 
-    @media (min-width: 800px) {
-        img {
-            max-width: 800px;
-        }
-    }
-
-    @media (max-width: 800px) {
-        img {
-            max-width: 100%;
-        }
-    }
 </style>

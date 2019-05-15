@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-
-    <img id="logo-main" alt="Titanium logo" src="./assets/logo-black.png">
+    <Nav/>
+    <Header/>
     <Content/>
   </div>
 
@@ -10,11 +10,15 @@
 </template>
 
 <script>
-import Content from './components/Content.vue'
+  import Nav from './components/Nav.vue'
+  import Header from './components/Header.vue'
+  import Content from './components/Content.vue'
 
 export default {
   name: 'app',
   components: {
+    Nav,
+    Header,
     Content
   }
 }
@@ -22,16 +26,14 @@ export default {
 
 <style>
 #app {
+  background-color: white;
+  max-width: 1000px;
+  margin: 0 auto auto;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-  #logo-main {
-
-    max-height: 50px;
-  }
 
 </style>
