@@ -121,7 +121,7 @@
 
     .header-text-sub {
         text-align: left;
-        font-family: 'Product Sans', Arial, sans-serif;
+        font-family: 'product_sansregular', Arial, sans-serif;
         font-weight: bold;
         margin: 8px 4px;
     }
