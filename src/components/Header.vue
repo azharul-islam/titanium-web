@@ -32,6 +32,8 @@
             <div class="header-text-sub" style="grid-column: 3; padding: 0 0;">Switch on
                 <vue-typer erase-style='clear'
                            :text='["#bright","#durable","#affordable"]'></vue-typer>.
+
+
             </div>
         </div>
 
@@ -241,7 +243,7 @@
         border-radius: 50%;
     }
 
-    .typed {
+    .typing {
         color: #42B152;
     }
 
