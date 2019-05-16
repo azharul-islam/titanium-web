@@ -24,7 +24,7 @@
                  style="max-width: 70px; margin: 0 0 0; grid-row: span 2"/>
 
 
-            <img src="../assets/logo-black.png" style="padding: 0 0; max-width:150px; align-self: end"/>
+            <img src="../assets/logo-black.png" style="margin: 0 0 0; max-width:150px; align-self: end"/>
             <label class="switch" style="grid-column: 2; padding: 0 0;">
                 <input type="checkbox" v-model="isBulbOn">
                 <span class="slider round"></span>
@@ -146,24 +146,7 @@
         margin: 8px 4px;
     }
 
-    @font-face {
-        font-family: 'product_sansbold';
-        src: url('../font/product_sans_bold-webfont.woff2') format('woff2'),
-        url('../font/product_sans_bold-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
 
-    }
-
-
-    @font-face {
-        font-family: 'product_sansregular';
-        src: url('../font/product_sans_regular-webfont.woff2') format('woff2'),
-        url('../font/product_sans_regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-
-    }
 
 
     .icon-header-sub {
@@ -241,10 +224,6 @@
 
     .slider.round:before {
         border-radius: 50%;
-    }
-
-    .typing {
-        color: #42B152;
     }
 
 

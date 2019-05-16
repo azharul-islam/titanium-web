@@ -36,4 +36,23 @@ export default {
   color: #2c3e50;
 }
 
+@font-face {
+  font-family: 'product_sansbold';
+  src: url('./font/product_sans_bold-webfont.woff2') format('woff2'),
+  url('./font/product_sans_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'product_sansregular';
+  src: url('./font/product_sans_regular-webfont.woff2') format('woff2'),
+  url('./font/product_sans_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 </style>
