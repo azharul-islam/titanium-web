@@ -15,13 +15,13 @@
         </div>
         <div class="header-text-sub linkified">Learn More</div>
 
-        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 80px 60px auto; grid-gap: 10px; margin: 20px 0 0;">
+        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 20px 0 0;">
 
 
             <img v-show="!isBulbOn" class="bulb-image" src="../assets/bulb-off.png"
-                 style="max-width: 70px; margin: 0 0 0; grid-row: span 2"/>
+                 style="max-width: 60px; margin: 0 0 0; grid-row: span 2"/>
             <img v-show="isBulbOn" class="bulb-image" src="../assets/bulb-on.png"
-                 style="max-width: 70px; margin: 0 0 0; grid-row: span 2"/>
+                 style="max-width: 60px; margin: 0 0 0; grid-row: span 2"/>
 
 
             <img src="../assets/logo-black.png" style="margin: 0 0 0; max-width:150px; align-self: end"/>
@@ -108,7 +108,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .header-container {
-        padding: 60px 0 0 0;
+        padding: 70px 0 0 0;
         display: grid;
 
         grid-template-columns: repeat(12, 1fr);
@@ -157,7 +157,7 @@
     }
 
     .linkified {
-        grid-column: 3/span 3;
+        grid-column: 3/span 4;
         text-decoration: underline;
         cursor: pointer;
     }

@@ -49,7 +49,7 @@
 <style scoped>
 
     .nav {
-        height: 46px;
+        height: 50px;
         z-index: 5;
         justify-content: space-between;
         align-items: center;
@@ -60,7 +60,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.8);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -77,7 +77,7 @@
         top: 0;
         left: 50%;
         margin-left: -65px;
-        padding: 12px 0;
+        padding: 14px 0;
     }
 
 
@@ -100,7 +100,7 @@
         display: inline-block;
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
-        padding: 12px 12px 12px 16px;
+        padding: 14px 14px 14px 18px;
         justify-self: start;
         -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
         transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -139,7 +139,7 @@
         top: 0;
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
-        padding: 12px 16px 0 16px;
+        padding: 13px 16px 0 16px;
         justify-self: end;
 
     }
