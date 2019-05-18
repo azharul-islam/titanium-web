@@ -33,17 +33,16 @@
     }
 
     .button {
-        padding: 10px 20px;
+        padding: 12px 22px 10px 22px;
         background-color: #42B152;
         color: white;
         border-radius: 30px;
         cursor: pointer;
-        /*font-weight: bold;*/
-        font-size: 20px;
+        font-size: 16px;
         border: none;
-        box-shadow: 0 10px 20px rgba(29, 142, 54, 0.25);
+        box-shadow: 0 10px 20px rgba(29, 178, 59, 0.25);
         -webkit-tap-highlight-color: transparent;
-
+        font-family: 'product_sansbold', Arial, sans-serif;
     }
 
 

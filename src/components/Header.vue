@@ -39,11 +39,8 @@
             <div class="header-text-sub" style="grid-column: 3; padding: 0 0; z-index: 1">Switch on
                 <vue-typer erase-style='clear'
                            :text='["#bright","#durable","#affordable"]'></vue-typer>.
-
             </div>
         </div>
-
-
     </div>
 
 </template>
@@ -124,8 +121,6 @@
         border-radius: 50%
     }
 
-
-
     .header-container {
         padding: 70px 0 0 0;
         display: grid;
@@ -162,8 +157,7 @@
 
     .header-text-sub {
         text-align: left;
-        font-family: 'product_sansregular', Arial, sans-serif;
-        font-weight: bold;
+        font-family: 'product_sansbold', Arial, sans-serif;
         margin: 8px 4px;
     }
 
