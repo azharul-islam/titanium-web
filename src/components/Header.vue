@@ -5,14 +5,14 @@
             switched on
         </div>
         <img class="icon-header-sub" src="../assets/lightning.png"/>
-        <div class="header-text-sub" style="grid-column: 3/10;">
+        <div class="header-text-sub" style="grid-column: 3/-1;">
             <animated-number :value="electricitySaved"
                              :formatValue="formatToPrice"
                              :duration="600"></animated-number>
             kWh electricity saved
         </div>
         <img class="icon-header-sub" src="../assets/clock.png"/>
-        <div class="header-text-sub" style="grid-column: 3/10;">
+        <div class="header-text-sub" style="grid-column: 3/-1;">
             <animated-number :value="bulbLife"
                              :formatValue="formatToPrice"
                              :duration="600"></animated-number>
@@ -21,7 +21,7 @@
         <div class="header-text-sub linkified" style="z-index: 1">Learn More →</div>
 
 
-        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 20px 0 30px; position: relative;">
+        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 30px 0 40px; position: relative;">
 
             <div class="circle"></div>
 
@@ -38,9 +38,7 @@
             </label>
             <div class="header-text-sub" style="grid-column: 3; padding: 0 0; z-index: 1">Switch on
                 <vue-typer erase-style='clear'
-                           :text='["#bright","#durable","#affordable"]'></vue-typer>
-                .
-
+                           :text='["#bright","#durable","#affordable"]'></vue-typer>.
 
             </div>
         </div>
@@ -139,7 +137,7 @@
 
     #header-text-main {
         grid-column: 2/-1;
-        margin: -55px 0 10px;
+        margin: -25px 0 10px;
         font-family: Futura, serif;
         font-weight: bold;
         font-size: 30px;

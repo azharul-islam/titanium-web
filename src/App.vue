@@ -3,6 +3,8 @@
     <Nav/>
     <Header/>
     <Content/>
+    <Products/>
+
   </div>
 
 
@@ -13,13 +15,15 @@
   import Nav from './components/Nav.vue'
   import Header from './components/Header.vue'
   import Content from './components/Content.vue'
+  import Products from './components/Products.vue'
 
 export default {
   name: 'app',
   components: {
     Nav,
     Header,
-    Content
+    Content,
+    Products
   }
 }
 </script>
@@ -42,7 +46,7 @@ export default {
   url('./font/product_sans_bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+  font-display: fallback;
 }
 
 
@@ -52,7 +56,7 @@ export default {
   url('./font/product_sans_regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+  font-display: swap;
 }
 
 </style>
