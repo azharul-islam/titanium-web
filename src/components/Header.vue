@@ -120,7 +120,7 @@
         left: -70px;
         width: 150px;
         height: 150px;
-        background: #f2f2f2;
+        background: #deeedd;
         border-radius: 50%
     }
 
