@@ -218,7 +218,7 @@
 
     input:checked + .slider {
         background-color: #42B152;
-        box-shadow: 0 10px 20px rgba(7, 177, 44, 0.16);
+        box-shadow: 0 10px 20px -5px rgba(66, 177, 82, 0.5);
 
     }
 
@@ -230,7 +230,8 @@
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
         transform: translateX(26px);
-        box-shadow: 0 10px 20px rgba(7, 177, 44, 0.16);
+        box-shadow: 0 10px 20px -5px rgba(66, 177, 82, 0.5);
+
 
     }
 

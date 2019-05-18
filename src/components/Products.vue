@@ -40,7 +40,7 @@
         cursor: pointer;
         font-size: 16px;
         border: none;
-        box-shadow: 0 10px 20px rgba(29, 178, 59, 0.25);
+        box-shadow: 0 10px 20px -5px rgba(66, 177, 82, 0.5);
         -webkit-tap-highlight-color: transparent;
         font-family: 'product_sansbold', Arial, sans-serif;
     }
