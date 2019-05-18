@@ -5,33 +5,41 @@
             switched on
         </div>
         <img class="icon-header-sub" src="../assets/lightning.png"/>
-        <div class="header-text-sub" style="grid-column: 3/10;"><animated-number  :value="electricitySaved"
-                                                                                  :formatValue="formatToPrice"
-                                                                                  :duration="600"></animated-number> kWh electricity saved</div>
-        <img class="icon-header-sub" src="../assets/clock.png"/>
-        <div class="header-text-sub" style="grid-column: 3/10;"><animated-number  :value="bulbLife"
-                                                                                  :formatValue="formatToPrice"
-                                                                                  :duration="600"></animated-number> more hours of light
+        <div class="header-text-sub" style="grid-column: 3/10;">
+            <animated-number :value="electricitySaved"
+                             :formatValue="formatToPrice"
+                             :duration="600"></animated-number>
+            kWh electricity saved
         </div>
-        <div class="header-text-sub linkified">Learn More</div>
+        <img class="icon-header-sub" src="../assets/clock.png"/>
+        <div class="header-text-sub" style="grid-column: 3/10;">
+            <animated-number :value="bulbLife"
+                             :formatValue="formatToPrice"
+                             :duration="600"></animated-number>
+            more hours of light
+        </div>
+        <div class="header-text-sub linkified" style="z-index: 1">Learn More →</div>
 
-        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 20px 0 0;">
 
+        <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 20px 0 30px; position: relative;">
+
+            <div class="circle"></div>
 
             <img v-show="!isBulbOn" class="bulb-image" src="../assets/bulb-off.png"
-                 style="max-width: 60px; margin: 0 0 0; grid-row: span 2"/>
+                 style="max-height: 117px; margin: 0 0 0; grid-row: span 2; z-index: 1"/>
             <img v-show="isBulbOn" class="bulb-image" src="../assets/bulb-on.png"
-                 style="max-width: 60px; margin: 0 0 0; grid-row: span 2"/>
+                 style="max-height: 117px; margin: 0 0 0; grid-row: span 2; z-index: 1"/>
 
 
-            <img src="../assets/logo-black.png" style="margin: 0 0 0; max-width:150px; align-self: end"/>
-            <label class="switch" style="grid-column: 2; padding: 0 0;">
+            <img src="../assets/logo-black.png" style="margin: 0 0 0; max-width:150px; align-self: end; z-index: 1"/>
+            <label class="switch" style="grid-column: 2; padding: 0 0; z-index: 1">
                 <input type="checkbox" v-model="isBulbOn">
                 <span class="slider round"></span>
             </label>
-            <div class="header-text-sub" style="grid-column: 3; padding: 0 0;">Switch on
+            <div class="header-text-sub" style="grid-column: 3; padding: 0 0; z-index: 1">Switch on
                 <vue-typer erase-style='clear'
-                           :text='["#bright","#durable","#affordable"]'></vue-typer>.
+                           :text='["#bright","#durable","#affordable"]'></vue-typer>
+                .
 
 
             </div>
@@ -65,7 +73,7 @@
                 return (137.5 * this.bulbStat)
             },
             bulbLife: function () {
-                return  (150000 * this.bulbStat)
+                return (150000 * this.bulbStat)
             },
 
         },
@@ -107,11 +115,26 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+    .circle {
+        position: absolute;
+        top: -15px;
+        left: -70px;
+        width: 150px;
+        height: 150px;
+        background: #f2f2f2;
+        border-radius: 50%
+    }
+
+
+
     .header-container {
         padding: 70px 0 0 0;
         display: grid;
-
         grid-template-columns: repeat(12, 1fr);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        user-select: none;
     }
 
     #header-text-main {
@@ -145,8 +168,6 @@
         font-weight: bold;
         margin: 8px 4px;
     }
-
-
 
 
     .icon-header-sub {
@@ -205,16 +226,20 @@
 
     input:checked + .slider {
         background-color: #42B152;
+        box-shadow: 0 10px 20px rgba(7, 177, 44, 0.16);
+
     }
 
     input:focus + .slider {
-        box-shadow: 0 0 1px #42B152;
+
     }
 
     input:checked + .slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
         transform: translateX(26px);
+        box-shadow: 0 10px 20px rgba(7, 177, 44, 0.16);
+
     }
 
     /* Rounded sliders */

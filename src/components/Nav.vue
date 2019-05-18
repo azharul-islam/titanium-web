@@ -60,8 +60,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        background-color: rgba(255, 255, 255, 1);
         backdrop-filter: saturate(180%) blur(20px);
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         transition: 0.18s ease;
