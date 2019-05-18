@@ -4,6 +4,7 @@
     <Header/>
     <Content/>
     <Products/>
+    <Footer/>
 
   </div>
 
@@ -16,6 +17,7 @@
   import Header from './components/Header.vue'
   import Content from './components/Content.vue'
   import Products from './components/Products.vue'
+  import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
@@ -23,7 +25,8 @@ export default {
     Nav,
     Header,
     Content,
-    Products
+    Products,
+    Footer
   }
 }
 </script>

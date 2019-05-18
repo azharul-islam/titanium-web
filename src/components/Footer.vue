@@ -1,12 +1,12 @@
 <template>
     <div class="product-section">
-        <img src="../assets/box_air_frontview_transparent.png"/>
+        <p>All Rights Reserved 2019</p>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Products',
+        name: 'Footer',
         props: {}
     }
 </script>
@@ -17,6 +17,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
+        background: transparent;
         font-family: 'product_sansregular', sans-serif;
     }
 
