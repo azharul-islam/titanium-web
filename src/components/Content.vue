@@ -1,4 +1,5 @@
 <template>
+    <div style="background-color: white">
     <div class="about-section">
         <h1 style="grid-column: 1/-1" >From our labs to your home.</h1>
 <!--        <p style="grid-column: 1/-1">We are industry experts in LED lighting technologies. We know LED bulbs are the future and-->
@@ -17,6 +18,7 @@
         <img class="extra-padding" src="../assets/test.png"/>
         <p><span class="bold-ps">Stress tested before shipping. </span>Our bulbs undergo thorough testing before they
             are shipped to you. This ensures the product you receive is of optimum quality. </p>
+    </div>
     </div>
 </template>
 

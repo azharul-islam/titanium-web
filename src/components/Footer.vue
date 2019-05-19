@@ -1,7 +1,7 @@
 <template>
     <div class="footer-section">
         <h2>Talk to us</h2>
-        <input class="message-box" type="text" placeholder="Send us a message">
+        <input class="message-box" type="text" placeholder="Send a message">
         <p>We'd love to hear from you.</p>
         <div class="icons-container">
             <a href="https://www.instagram.com/qqq/"><img src="../assets/footer/instagram_icon.svg"
@@ -9,6 +9,8 @@
             <a href="https://www.facebook.com/Ghaafri"><img src="../assets/footer/facebook_icon.svg"/></a>
             <a href="tel:+97433338469"><img src="../assets/footer/call_icon.svg"/></a>
         </div>
+        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © 2019 Titanium Technologies Bangladesh Ltd. All rights reserved.</p>
+
     </div>
 </template>
 
@@ -22,6 +24,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .footer-section {
+        position: -webkit-sticky; /* Required for Safari */
+        position: sticky;
+        bottom: 0;
+        z-index: -1;
         background-color: #2c3e50;
         background-image: url("../assets/bangladesh.svg");
         background-size: 200px;
@@ -46,23 +52,27 @@
         max-width: 350px;
     }
 
+    p{
+        padding: 0px 0px 0px 10px;
+    }
+
     .message-box {
         font-family: 'product_sansregular', sans-serif;
         padding: 10px;
         border-radius: 10px;
         font-size: 14px;
-        border: 1px solid rgba(255, 255, 255);
+        border: 1px solid rgba(255, 255, 255, 0.75);
         background-color: transparent;
         color: white;
         height: 20px;
-        width: 200px;
+        width: 300px;
         margin: 0px 0px 0px 0px;
 
     }
 
     .message-box:focus {
         outline: none;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgb(255, 255, 255);
         transition: all 200ms;
     }
 
@@ -72,22 +82,15 @@
 
 
     .icons-container img {
+        background-origin: padding-box;
         width: 35px;
         cursor: pointer;
         background-color: white;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.21);
         margin: 0px 20px 0px 0px;
 
     }
 
-    .icons-container img:hover {
 
-        background-color: white;
-        border: 1px solid white;
-        opacity: 0.5;
-        transition: all 200ms;
-        border: 1px solid rgb(255, 255, 255);
-
-    }
 </style>

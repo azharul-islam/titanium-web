@@ -15,6 +15,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .product-section {
+        background-color: white;
         display: grid;
         justify-items: center;
         align-items: center;

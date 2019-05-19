@@ -32,7 +32,6 @@
 
 <style>
     #app {
-        background-color: white;
         max-width: 1000px;
         margin: 0 auto auto;
         font-family: 'product_sansregular', Helvetica, Arial, sans-serif;

@@ -122,6 +122,7 @@
     }
 
     .header-container {
+        background-color: white;
         padding: 70px 0 0 0;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
