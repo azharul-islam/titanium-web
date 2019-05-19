@@ -43,14 +43,9 @@
         color: white;
         font-family: 'product_sansregular', sans-serif;
 
-        /*background: #ff375c;*/
-        /*color: #fff;*/
-        /*box-shadow: 0 10px 20px -5px rgba(255,55,92,.5);*/
     }
 
     h1 {
-        font-family: Futura, serif;
-        text-align: left;
         font-size: 30px;
     }
 

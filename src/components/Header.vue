@@ -133,7 +133,7 @@
     #header-text-main {
         grid-column: 2/-1;
         margin: -25px 0 10px;
-        font-family: Futura, serif;
+        font-family: Futura,Trebuchet MS,Arial,sans-serif;
         font-weight: bold;
         font-size: 30px;
         text-align: start;

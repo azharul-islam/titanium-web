@@ -19,10 +19,11 @@
         justify-items: center;
         align-items: center;
         font-family: 'product_sansregular', sans-serif;
+        padding: 12px 12px 22px;
     }
 
     h1 {
-        font-family: Futura, serif;
+        font-family: Futura,Trebuchet MS,Arial,sans-serif;
         padding: 10px 22px 5px;
         text-align: left;
 
