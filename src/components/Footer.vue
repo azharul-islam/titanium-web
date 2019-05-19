@@ -7,7 +7,7 @@
             <a href="https://www.instagram.com/qqq/"><img src="../assets/footer/instagram_icon.svg"
                                                           alt="instagram"/></a>
             <a href="https://www.facebook.com/Ghaafri"><img src="../assets/footer/facebook_icon.svg"/></a>
-            <a href="tel:+97431300080"><img src="../assets/footer/call_icon.svg"/></a>
+            <a href="tel:+97433338469"><img src="../assets/footer/call_icon.svg"/></a>
         </div>
     </div>
 </template>
