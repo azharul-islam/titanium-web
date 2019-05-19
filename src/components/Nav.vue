@@ -50,7 +50,7 @@
 
     .nav {
         height: 50px;
-        z-index: 5;
+        z-index: 11;
         justify-content: space-between;
         align-items: center;
         list-style-type: none;

@@ -18,7 +18,7 @@
                              :duration="600"></animated-number>
             more hours of light
         </div>
-        <div class="header-text-sub linkified" style="z-index: 1">Learn More →</div>
+        <div class="header-text-sub linkified">Learn More →</div>
 
 
         <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 30px 0 40px; position: relative;">
@@ -26,17 +26,17 @@
             <div class="circle"></div>
 
             <img v-show="!isBulbOn" class="bulb-image" src="../assets/bulb-off.png"
-                 style="max-height: 117px; margin: 0 0 0; grid-row: span 2; z-index: 1"/>
+                 style="max-height: 117px; margin: 0 0 0; grid-row: span 2;"/>
             <img v-show="isBulbOn" class="bulb-image" src="../assets/bulb-on.png"
-                 style="max-height: 117px; margin: 0 0 0; grid-row: span 2; z-index: 1"/>
+                 style="max-height: 117px; margin: 0 0 0; grid-row: span 2;"/>
 
 
-            <img src="../assets/logo-black.png" style="margin: 0 0 0; max-width:150px; align-self: end; z-index: 1"/>
-            <label class="switch" style="grid-column: 2; padding: 0 0; z-index: 1">
+            <img src="../assets/logo-black.png" style="margin: 0 0 0; max-width:150px; align-self: end;"/>
+            <label class="switch" style="grid-column: 2; padding: 0 0; ">
                 <input type="checkbox" v-model="isBulbOn">
                 <span class="slider round"></span>
             </label>
-            <div class="header-text-sub" style="grid-column: 3; padding: 0 0; z-index: 1">Switch on
+            <div class="header-text-sub" style="grid-column: 3; padding: 0 0;">Switch on
                 <vue-typer erase-style='clear'
                            :text='["#bright","#durable","#affordable"]'></vue-typer>.
             </div>
@@ -121,7 +121,13 @@
         border-radius: 50%
     }
 
+    .bulb-image {
+        position: relative;
+        z-index: 10;
+    }
+
     .header-container {
+        position: relative;
         background-color: white;
         padding: 70px 0 0 0;
         display: grid;
@@ -129,6 +135,7 @@
         background-repeat: no-repeat;
         background-position: left bottom;
         user-select: none;
+        z-index: 10;
     }
 
     #header-text-main {

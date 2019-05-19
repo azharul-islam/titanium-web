@@ -4,12 +4,12 @@
         <input class="message-box" type="text" placeholder="Send a message">
         <p>We'd love to hear from you.</p>
         <div class="icons-container">
-            <a href="https://www.instagram.com/qqq/"><img src="../assets/footer/instagram_icon.svg"
+            <a href="https://www.facebook.com/titaniumtechbd"><img src="../assets/footer/facebook_icon.svg"/></a>
+            <a v-scroll-reveal.reset href="https://www.instagram.com/titaniumbd/"><img src="../assets/footer/instagram_icon.svg"
                                                           alt="instagram"/></a>
-            <a href="https://www.facebook.com/Ghaafri"><img src="../assets/footer/facebook_icon.svg"/></a>
-            <a href="tel:+97433338469"><img src="../assets/footer/call_icon.svg"/></a>
+            <a href="tel:+8801720946060"><img src="../assets/footer/call_icon.svg"/></a>
         </div>
-        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © 2019 Titanium Technologies Bangladesh Ltd. All rights reserved.</p>
+        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium Technologies Bangladesh Ltd. All rights reserved.</p>
 
     </div>
 </template>
@@ -17,7 +17,13 @@
 <script>
     export default {
         name: 'Footer',
-        props: {}
+        props: {},
+        computed: {
+            currentYear: function () {
+                return new Date().getFullYear();
+            }
+        }
+
     }
 </script>
 
@@ -27,7 +33,7 @@
         position: -webkit-sticky; /* Required for Safari */
         position: sticky;
         bottom: 0;
-        z-index: -1;
+        z-index: 1;
         background-color: #2c3e50;
         background-image: url("../assets/bangladesh.svg");
         background-size: 200px;

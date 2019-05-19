@@ -1,6 +1,6 @@
 <template>
     <div class="product-section">
-        <img src="../assets/box_air_frontview_transparent.png"/>
+        <img v-scroll-reveal.reset src="../assets/box_air_frontview_transparent.png"/>
         <div class="button">Browse All →</div>
     </div>
 </template>
@@ -15,12 +15,14 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .product-section {
+        position:relative;
         background-color: white;
         display: grid;
         justify-items: center;
         align-items: center;
         font-family: 'product_sansregular', sans-serif;
         padding: 12px 12px 22px;
+        z-index: 10;
     }
 
     h1 {
@@ -31,7 +33,7 @@
     }
 
     img {
-        max-width: 350px;
+        max-width: 360px;
     }
 
     .button {
