@@ -43,14 +43,7 @@
                 if (this.message !== "") {
                     db.collection("messages").add({
                         message: this.message
-                    })
-                        .then(function (docRef) {
-                            console.log("Document written with ID: ", docRef.id);
-                        })
-                        .catch(function (error) {
-                            console.error("Error adding document: ", error);
-                        });
-
+                    });
                     this.message = "";
                 }
             },
@@ -148,15 +141,15 @@
         }
 
         a:nth-child(2) {
-            transition-delay: 300ms ;
+            transition-delay: 350ms ;
         }
 
         a:nth-child(3) {
-            transition-delay: 150ms*2 ;
+            transition-delay: 500ms ;
         }
 
         a:nth-child(4) {
-            transition-delay: 100ms*3 ;
+            transition-delay: 800ms ;
         }
     }
 

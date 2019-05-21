@@ -2,8 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import VueScrollReveal from 'vue-scroll-reveal';
-Vue.use(VueScrollReveal);
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
