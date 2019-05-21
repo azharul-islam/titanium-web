@@ -8,11 +8,12 @@
 
         <p>We'd love to hear from you. </p>
         <div class="icons-container">
-            <a href="https://www.facebook.com/titaniumtechbd"><img src="../assets/footer/facebook_icon.svg"/></a>
+            <a href="https://www.facebook.com/titaniumtechbd"><img src="../assets/footer/facebook-icon.svg"/></a>
             <a href="https://www.instagram.com/titaniumbd/"><img
-                    src="../assets/footer/instagram_icon.svg"
+                    src="../assets/footer/instagram-icon.svg"
                     alt="instagram"/></a>
-            <a href="tel:+8801720946060"><img src="../assets/footer/call_icon.svg"/></a>
+            <a href="tel:+8801720946060"><img src="../assets/footer/call-icon.svg"/></a>
+            <a href="tel:+8801720946060"><img src="../assets/footer/email-icon.svg"/></a>
         </div>
         <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
             Technologies Bangladesh Ltd. All rights reserved.</p>
@@ -38,7 +39,7 @@
         },
         methods: {
             sendMessage: function () {
-                if (!this.message.trim().equals("")) {
+                if (!this.message.equals("")) {
                     db.collection("messages").add({
                         message: this.message
                     })
@@ -57,11 +58,10 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .footer-section {
-        position: -webkit-sticky; /* Required for Safari */
         position: sticky;
+        position: -webkit-sticky; /* Required for Safari */
         bottom: 0;
         z-index: 1;
         background-color: #2c3e50;
@@ -106,6 +106,11 @@
         outline: none;
     }
 
+    .message-box::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 0.4; /* Firefox */
+    }
+
     .icons-container {
         padding: 16px 0 0 0px;
     }
@@ -113,12 +118,12 @@
 
     .icons-container img {
         background-origin: content-box;
-        width: 35px;
+        width: 22px;
         cursor: pointer;
-        background-color: white;
         border-radius: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.21);
-        margin: 0px 20px 0px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        margin: 0px 18px 0px 0px;
+        padding: 6px;
     }
 
     .message-sender {
@@ -127,9 +132,8 @@
     }
 
     .message-sender img {
-        width: 20px;
-        height: 20px;
-        padding: 10px;
+        width: 26px;
+        padding: 7px;
         cursor: pointer;
         background-color: #2c3e50;
         border-radius: 10px;
