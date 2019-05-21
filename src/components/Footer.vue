@@ -6,7 +6,7 @@
             <img src="../assets/footer/send-message.svg" @click="sendMessage"/>
         </div>
 
-        <p>We'd love to hear from you. </p>
+        <p>We'd love to hear from you.</p>
         <div class="icons-container">
             <a href="https://www.facebook.com/titaniumtechbd"
                v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
@@ -15,7 +15,7 @@
                v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/instagram-icon.svg"
                     alt="instagram"/></a>
-            <a href="tel:+8801720946060"  v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
+            <a href="tel:+8801720946060" v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/call-icon.svg"/></a>
             <a href="mailto:info@titanium.com.bd"
                v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
@@ -36,7 +36,8 @@
             return {
                 message: "",
                 isNotSticky: false,
-                isSocialNotVisible: true
+                isSocialNotVisible: true,
+                debug: ""
             }
         },
         computed: {
@@ -54,13 +55,13 @@
                 }
             },
             handleScrollFooter: function (evt, el) {
-                if (document.documentElement.scrollHeight - document.documentElement.clientHeight - window.scrollY < el.scrollHeight+10) {
-                        this.isNotSticky = true;
+                if (document.body.scrollHeight -window.innerHeight - window.pageYOffset < el.scrollHeight) {
+                    this.isNotSticky = true;
                 } else {
                     this.isNotSticky = false;
                 }
 
-                if ((document.documentElement.scrollHeight - document.documentElement.clientHeight) - window.scrollY < 165) {
+                if ((document.documentElement.scrollHeight - document.documentElement.clientHeight) - window.pageYOffset < 165) {
                     if (this.isSocialNotVisible === true)
                         this.isSocialNotVisible = false;
                 }
@@ -132,7 +133,7 @@
         padding: 16px 0 0 0px;
 
         a {
-            transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition: 1s opacity cubic-bezier(0.39, 0.575, 0.565, 1);
         }
 
         a:nth-child(2) {
