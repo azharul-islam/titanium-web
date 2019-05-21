@@ -38,17 +38,19 @@
         },
         methods: {
             sendMessage: function () {
-                db.collection("messages").add({
-                    message: this.message
-                })
-                    .then(function (docRef) {
-                        console.log("Document written with ID: ", docRef.id);
+                if (!this.message.trim().equals("")) {
+                    db.collection("messages").add({
+                        message: this.message
                     })
-                    .catch(function (error) {
-                        console.error("Error adding document: ", error);
-                    });
+                        .then(function (docRef) {
+                            console.log("Document written with ID: ", docRef.id);
+                        })
+                        .catch(function (error) {
+                            console.error("Error adding document: ", error);
+                        });
 
-                this.message = "";
+                    this.message = "";
+                }
             }
         }
 
@@ -56,7 +58,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
     .footer-section {
         position: -webkit-sticky; /* Required for Safari */
         position: sticky;
@@ -95,15 +97,13 @@
         background-color: transparent;
         color: white;
         height: 20px;
-        width: 300px;
+        width: 100%;
         margin: 0px 0px 0px 0px;
 
     }
 
     .message-box:focus {
         outline: none;
-        border: 1px solid rgb(255, 255, 255);
-        transition: all 200ms;
     }
 
     .icons-container {
@@ -122,7 +122,8 @@
     }
 
     .message-sender {
-        display: flex;
+        display: grid;
+        grid-template-columns: minmax(auto, 400px) 42px;
     }
 
     .message-sender img {
@@ -132,8 +133,8 @@
         cursor: pointer;
         background-color: #2c3e50;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.93);
-        margin: 0px 0px 0px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        margin: 0px 0px 0px -10px;
     }
 
 

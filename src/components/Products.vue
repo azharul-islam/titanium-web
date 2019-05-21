@@ -21,7 +21,7 @@
         justify-items: center;
         align-items: center;
         font-family: 'product_sansregular', sans-serif;
-        padding: 12px 12px 22px;
+        padding: 0 12px 22px;
         z-index: 10;
     }
 
