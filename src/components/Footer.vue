@@ -56,7 +56,7 @@
             },
             handleScroll: function (evt, el) {
 
-                if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < el. ) {
+                if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < 200 ) {
                     el.setAttribute(
                         'style',
                         'opacity: 1; transform: translate3d(0, -10px, 0)'
