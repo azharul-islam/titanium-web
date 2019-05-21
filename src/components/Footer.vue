@@ -1,5 +1,5 @@
 <template>
-    <div v-scroll="handleScrollFooter" class="footer-section">
+    <div id="footer" v-scroll="handleScrollFooter" class="footer-section" v-bind:class="{ 'not-sticky': isNotSticky }">
         <h2>Talk to us</h2>
         <div class="message-sender">
             <input class="message-box" type="text" placeholder="Send a message" v-model="message">
@@ -29,7 +29,8 @@
         props: {},
         data: function () {
             return {
-                message: ""
+                message: "",
+                isNotSticky: false
             }
         },
         computed: {
@@ -55,7 +56,7 @@
             },
             handleScroll: function (evt, el) {
 
-                if (window.scrollY > 1116) {
+                if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < el. ) {
                     el.setAttribute(
                         'style',
                         'opacity: 1; transform: translate3d(0, -10px, 0)'
@@ -64,18 +65,15 @@
                 return window.scrollY > 1116
             },
             handleScrollFooter: function (evt, el) {
-                console.log(window.scrollY);
+                if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < el.scrollHeight ) {
+                    el.setAttribute(
+                        'style',
+                        ' opacity: 1;'
+                    )
+                }
 
-                if (window.scrollY > 843) {
-                    el.setAttribute(
-                        'style',
-                        'opacity: 1;'
-                    )
-                } else if(window.scrollY < 843) {
-                    el.setAttribute(
-                        'style',
-                        'opacity: 0;'
-                    )
+                if (window.scrollY >= (document.documentElement.scrollHeight - document.documentElement.clientHeight)) {
+                 this.isNotSticky = true;
                 }
             }
         }
@@ -85,6 +83,7 @@
 
 <style scoped lang="scss">
     .footer-section {
+        opacity: 0;
         position: sticky;
         position: -webkit-sticky; /* Required for Safari */
         bottom: 0;
@@ -101,6 +100,10 @@
         padding: 12px 12px 12px 22px;
         text-align: left;
         font-family: 'product_sansregular', sans-serif;
+    }
+
+    .not-sticky {
+        position: relative;
     }
 
     h2 {
@@ -145,15 +148,15 @@
         }
 
         a:nth-child(2) {
-            transition-delay: 200ms ;
+            transition-delay: 300ms ;
         }
 
         a:nth-child(3) {
-            transition-delay: 200ms*2 ;
+            transition-delay: 150ms*2 ;
         }
 
         a:nth-child(4) {
-            transition-delay: 200ms*3 ;
+            transition-delay: 100ms*3 ;
         }
     }
 
