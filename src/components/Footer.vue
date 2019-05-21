@@ -8,13 +8,18 @@
 
         <p>We'd love to hear from you. </p>
         <div class="icons-container">
-            <a href="https://www.facebook.com/titaniumtechbd" v-scroll="handleScroll"><img
+            <a href="https://www.facebook.com/titaniumtechbd"
+               v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/facebook-icon.svg"/></a>
-            <a href="https://www.instagram.com/titaniumbd/"  v-scroll="handleScroll"><img
+            <a href="https://www.instagram.com/titaniumbd/"
+               v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/instagram-icon.svg"
                     alt="instagram"/></a>
-            <a href="tel:+8801720946060"  v-scroll="handleScroll"><img src="../assets/footer/call-icon.svg"/></a>
-            <a href="mailto:info@titanium.com.bd"  v-scroll="handleScroll"><img src="../assets/footer/email-icon.svg"/></a>
+            <a href="tel:+8801720946060"  v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
+                    src="../assets/footer/call-icon.svg"/></a>
+            <a href="mailto:info@titanium.com.bd"
+               v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
+                    src="../assets/footer/email-icon.svg"/></a>
         </div>
         <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
             Technologies Bangladesh Ltd. All rights reserved.</p>
@@ -30,7 +35,8 @@
         data: function () {
             return {
                 message: "",
-                isNotSticky: false
+                isNotSticky: false,
+                isSocialNotVisible: true
             }
         },
         computed: {
@@ -47,18 +53,16 @@
                     this.message = "";
                 }
             },
-            handleScroll: function (evt, el) {
-                if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < 200 ) {
-                    el.setAttribute(
-                        'style',
-                        'opacity: 1;'
-                    )
-                }
-                return window.scrollY > 1116
-            },
             handleScrollFooter: function (evt, el) {
-                if (window.scrollY >= (document.documentElement.scrollHeight - document.documentElement.clientHeight)) {
-                 this.isNotSticky = true;
+                if (document.documentElement.scrollHeight - document.documentElement.clientHeight - window.scrollY < el.scrollHeight+10) {
+                        this.isNotSticky = true;
+                } else {
+                    this.isNotSticky = false;
+                }
+
+                if ((document.documentElement.scrollHeight - document.documentElement.clientHeight) - window.scrollY < 165) {
+                    if (this.isSocialNotVisible === true)
+                        this.isSocialNotVisible = false;
                 }
             }
         }
@@ -68,6 +72,7 @@
 
 <style scoped lang="scss">
     .footer-section {
+        visibility: hidden;
         position: sticky;
         position: -webkit-sticky; /* Required for Safari */
         bottom: 0;
@@ -87,7 +92,7 @@
     }
 
     .not-sticky {
-        position: relative;
+        visibility: visible;
     }
 
     h2 {
@@ -128,20 +133,23 @@
 
         a {
             transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
-            opacity: 0;
         }
 
         a:nth-child(2) {
-            transition-delay: 350ms ;
+            transition-delay: 350ms;
         }
 
         a:nth-child(3) {
-            transition-delay: 500ms ;
+            transition-delay: 500ms;
         }
 
         a:nth-child(4) {
-            transition-delay: 800ms ;
+            transition-delay: 800ms;
         }
+    }
+
+    .not-visible {
+        opacity: 0;
     }
 
 
