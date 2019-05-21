@@ -11,8 +11,7 @@
     "animated-number-vue": "^0.1.5",
     "firebase": "^6.0.2",
     "vue": "^2.6.6",
-    "vue-typer": "^1.2.0",
-    "vuefire": "^2.0.0-alpha.24"
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",

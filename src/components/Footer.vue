@@ -1,15 +1,21 @@
 <template>
     <div class="footer-section">
         <h2>Talk to us</h2>
-        <input class="message-box" type="text" placeholder="Send a message">
-        <p>We'd love to hear from you.</p>
+        <div class="message-sender">
+            <input class="message-box" type="text" placeholder="Send a message">
+<!--           <img src="../assets/footer/send-message.svg"/>-->
+        </div>
+
+        <p>We'd love to hear from you. </p>
         <div class="icons-container">
             <a href="https://www.facebook.com/titaniumtechbd"><img src="../assets/footer/facebook_icon.svg"/></a>
-            <a v-scroll-reveal.reset href="https://www.instagram.com/titaniumbd/"><img src="../assets/footer/instagram_icon.svg"
-                                                          alt="instagram"/></a>
+            <a v-scroll-reveal.reset href="https://www.instagram.com/titaniumbd/"><img
+                    src="../assets/footer/instagram_icon.svg"
+                    alt="instagram"/></a>
             <a href="tel:+8801720946060"><img src="../assets/footer/call_icon.svg"/></a>
         </div>
-        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium Technologies Bangladesh Ltd. All rights reserved.</p>
+        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
+            Technologies Bangladesh Ltd. All rights reserved.</p>
 
     </div>
 </template>
@@ -54,11 +60,7 @@
         padding: 0px 0px 0px 0px;
     }
 
-    img {
-        max-width: 350px;
-    }
-
-    p{
+    p {
         padding: 0px 0px 0px 10px;
     }
 
@@ -88,14 +90,23 @@
 
 
     .icons-container img {
-        background-origin: padding-box;
+        background-origin: content-box;
         width: 35px;
         cursor: pointer;
         background-color: white;
         border-radius: 10px;
         border: 1px solid rgba(0, 0, 0, 0.21);
         margin: 0px 20px 0px 0px;
+    }
 
+    .message-sender img {
+        background-origin: content-box;
+        width: 35px;
+        cursor: pointer;
+        background-color: #2c3e50;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        margin: 0px 20px 0px 0px;
     }
 
 
