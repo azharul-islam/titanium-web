@@ -13,7 +13,7 @@
                     src="../assets/footer/instagram-icon.svg"
                     alt="instagram"/></a>
             <a href="tel:+8801720946060"><img src="../assets/footer/call-icon.svg"/></a>
-            <a href="tel:+8801720946060"><img src="../assets/footer/email-icon.svg"/></a>
+            <a href="mailto:info@titanium.com.bd"><img src="../assets/footer/email-icon.svg"/></a>
         </div>
         <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
             Technologies Bangladesh Ltd. All rights reserved.</p>

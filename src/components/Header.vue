@@ -4,14 +4,14 @@
         <div id="header-text-main"><span class="brand-highlight on-counter">{{bulbStatFormatted}}</span><br>
             switched on
         </div>
-        <img class="icon-header-sub" src="../assets/lightning.png"/>
+        <img class="icon-header-sub" src="../assets/power.svg"/>
         <div class="header-text-sub" style="grid-column: 3/-1;">
             <animated-number :value="electricitySaved"
                              :formatValue="formatToPrice"
                              :duration="600"></animated-number>
             kWh electricity saved
         </div>
-        <img class="icon-header-sub" src="../assets/clock.png"/>
+        <img class="icon-header-sub" src="../assets/clock.svg"/>
         <div class="header-text-sub" style="grid-column: 3/-1;">
             <animated-number :value="bulbLife"
                              :formatValue="formatToPrice"
