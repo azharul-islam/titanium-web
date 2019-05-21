@@ -1,5 +1,5 @@
 <template>
-    <div class="footer-section">
+    <div v-scroll="handleScrollFooter" class="footer-section">
         <h2>Talk to us</h2>
         <div class="message-sender">
             <input class="message-box" type="text" placeholder="Send a message" v-model="message">
@@ -8,19 +8,19 @@
 
         <p>We'd love to hear from you. </p>
         <div class="icons-container">
-            <a href="https://www.facebook.com/titaniumtechbd"><img src="../assets/footer/facebook-icon.svg"/></a>
-            <a href="https://www.instagram.com/titaniumbd/"><img
+            <a href="https://www.facebook.com/titaniumtechbd" v-scroll="handleScroll"><img
+                    src="../assets/footer/facebook-icon.svg"/></a>
+            <a href="https://www.instagram.com/titaniumbd/"  v-scroll="handleScroll"><img
                     src="../assets/footer/instagram-icon.svg"
                     alt="instagram"/></a>
-            <a href="tel:+8801720946060"><img src="../assets/footer/call-icon.svg"/></a>
-            <a href="mailto:info@titanium.com.bd"><img src="../assets/footer/email-icon.svg"/></a>
+            <a href="tel:+8801720946060"  v-scroll="handleScroll"><img src="../assets/footer/call-icon.svg"/></a>
+            <a href="mailto:info@titanium.com.bd"  v-scroll="handleScroll"><img src="../assets/footer/email-icon.svg"/></a>
         </div>
         <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
             Technologies Bangladesh Ltd. All rights reserved.</p>
 
     </div>
 </template>
-
 <script>
     import {db} from '../main.js'
 
@@ -39,7 +39,7 @@
         },
         methods: {
             sendMessage: function () {
-                if (!this.message.equals("")) {
+                if (this.message !== "") {
                     db.collection("messages").add({
                         message: this.message
                     })
@@ -51,6 +51,31 @@
                         });
 
                     this.message = "";
+                }
+            },
+            handleScroll: function (evt, el) {
+
+                if (window.scrollY > 1116) {
+                    el.setAttribute(
+                        'style',
+                        'opacity: 1; transform: translate3d(0, -10px, 0)'
+                    )
+                }
+                return window.scrollY > 1116
+            },
+            handleScrollFooter: function (evt, el) {
+                console.log(window.scrollY);
+
+                if (window.scrollY > 843) {
+                    el.setAttribute(
+                        'style',
+                        'opacity: 1;'
+                    )
+                } else if(window.scrollY < 843) {
+                    el.setAttribute(
+                        'style',
+                        'opacity: 0;'
+                    )
                 }
             }
         }
@@ -113,6 +138,23 @@
 
     .icons-container {
         padding: 16px 0 0 0px;
+
+        a {
+            transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
+            opacity: 0;
+        }
+
+        a:nth-child(2) {
+            transition-delay: 200ms ;
+        }
+
+        a:nth-child(3) {
+            transition-delay: 200ms*2 ;
+        }
+
+        a:nth-child(4) {
+            transition-delay: 200ms*3 ;
+        }
     }
 
 
