@@ -48,23 +48,15 @@
                 }
             },
             handleScroll: function (evt, el) {
-
                 if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < 200 ) {
                     el.setAttribute(
                         'style',
-                        'opacity: 1; transform: translate3d(0, -10px, 0)'
+                        'opacity: 1;'
                     )
                 }
                 return window.scrollY > 1116
             },
             handleScrollFooter: function (evt, el) {
-                if (((document.documentElement.scrollHeight - document.documentElement.clientHeight))-window.scrollY < el.scrollHeight ) {
-                    el.setAttribute(
-                        'style',
-                        ' opacity: 1;'
-                    )
-                }
-
                 if (window.scrollY >= (document.documentElement.scrollHeight - document.documentElement.clientHeight)) {
                  this.isNotSticky = true;
                 }
@@ -76,7 +68,6 @@
 
 <style scoped lang="scss">
     .footer-section {
-        opacity: 0;
         position: sticky;
         position: -webkit-sticky; /* Required for Safari */
         bottom: 0;

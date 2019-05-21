@@ -47,7 +47,7 @@
 
 <script>
     import {db} from '../main.js'
-    import firebase from 'firebase'
+    import firebase from 'firebase/app'
     import {VueTyper} from 'vue-typer'
     import AnimatedNumber from "animated-number-vue";
 
