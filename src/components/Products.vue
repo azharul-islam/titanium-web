@@ -1,6 +1,6 @@
 <template>
     <div class="product-section">
-        <img v-scroll-reveal.reset src="../assets/box_air_frontview_transparent.png"/>
+        <img src="../assets/box_air_frontview_transparent.png"/>
         <div class="button">Browse All →</div>
     </div>
 </template>

@@ -2,14 +2,14 @@
     <div class="footer-section">
         <h2>Talk to us</h2>
         <div class="message-sender">
-            <input class="message-box" type="text" placeholder="Send a message">
-<!--           <img src="../assets/footer/send-message.svg"/>-->
+            <input class="message-box" type="text" placeholder="Send a message" v-model="message">
+            <img src="../assets/footer/send-message.svg" @click="sendMessage"/>
         </div>
 
         <p>We'd love to hear from you. </p>
         <div class="icons-container">
             <a href="https://www.facebook.com/titaniumtechbd"><img src="../assets/footer/facebook_icon.svg"/></a>
-            <a v-scroll-reveal.reset href="https://www.instagram.com/titaniumbd/"><img
+            <a href="https://www.instagram.com/titaniumbd/"><img
                     src="../assets/footer/instagram_icon.svg"
                     alt="instagram"/></a>
             <a href="tel:+8801720946060"><img src="../assets/footer/call_icon.svg"/></a>
@@ -21,12 +21,34 @@
 </template>
 
 <script>
+    import {db} from '../main.js'
+
     export default {
         name: 'Footer',
         props: {},
+        data: function () {
+            return {
+                message: ""
+            }
+        },
         computed: {
             currentYear: function () {
                 return new Date().getFullYear();
+            }
+        },
+        methods: {
+            sendMessage: function () {
+                db.collection("messages").add({
+                    message: this.message
+                })
+                    .then(function (docRef) {
+                        console.log("Document written with ID: ", docRef.id);
+                    })
+                    .catch(function (error) {
+                        console.error("Error adding document: ", error);
+                    });
+
+                this.message = "";
             }
         }
 
@@ -99,14 +121,19 @@
         margin: 0px 20px 0px 0px;
     }
 
+    .message-sender {
+        display: flex;
+    }
+
     .message-sender img {
-        background-origin: content-box;
-        width: 35px;
+        width: 20px;
+        height: 20px;
+        padding: 10px;
         cursor: pointer;
         background-color: #2c3e50;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        margin: 0px 20px 0px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.93);
+        margin: 0px 0px 0px 10px;
     }
 
 
