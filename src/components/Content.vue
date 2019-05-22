@@ -48,6 +48,7 @@
 
     h1 {
         font-size: 30px;
+        margin-block-end: 0.4em;
     }
 
     p {
@@ -55,6 +56,9 @@
         font-size: 17px;
         text-align: left;
         padding: 10px 0px;
+        line-height: 24px;
+        margin-block-end: 0.7em;
+        margin-block-start: 0.7em;
     }
 
     img {

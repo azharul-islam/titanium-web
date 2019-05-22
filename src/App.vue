@@ -52,7 +52,7 @@
         url('./font/product_sans_bold-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-        font-display: fallback;
+        font-display: swap;
     }
 
 

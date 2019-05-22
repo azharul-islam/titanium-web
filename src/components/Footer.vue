@@ -1,6 +1,6 @@
 <template>
     <div id="footer" v-scroll="handleScrollFooter" class="footer-section" v-bind:class="{ 'not-sticky': isNotSticky }">
-        <h2>Talk to us</h2>
+        <h2>Get in touch</h2>
         <div class="message-sender">
             <input class="message-box" type="text" placeholder="Send a message" v-model="message">
             <img src="../assets/footer/send-message.svg" @click="sendMessage"/>
@@ -97,7 +97,7 @@
     }
 
     h2 {
-        font-family: Futura, serif;
+        font-family: Futura,Trebuchet MS,Arial,sans-serif;
         text-align: left;
         padding: 0px 0px 0px 0px;
     }
