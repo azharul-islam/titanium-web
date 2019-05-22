@@ -17,7 +17,48 @@
 
       gtag('config', 'UA-113787166-2');
     </script>
+    <style>
+      #loading-wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
 
+      #loading-content {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px 0 0 -50px;
+        border: 3px solid #42B152;
+      }
+      #loading-content {
+        border: 3px solid transparent;
+        border-top-color: #42B152;
+        border-bottom-color: #42B152;
+        border-radius: 50%;
+        -webkit-animation: loader 2s linear infinite;
+        -moz-animation: loader 2s linear infinite;
+        -o-animation: loader 2s linear infinite;
+        animation: loader 2s linear infinite;
+      }
+      @keyframes loader {
+        0% {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body style="margin: 0; background: white;">
 
@@ -30,7 +71,12 @@
     <noscript>
       <strong>We're sorry but titanium-web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div id="loading-wrapper">
+        <div id="loading-content"></div>
+      </div>
+
+    </div>
     <!-- built files will be auto injected -->
 
   </body>
