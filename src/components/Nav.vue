@@ -9,13 +9,13 @@
         <li><span id="language-switch">বাংলা</span></li>
 
         <li style="margin-top: 100px">
-            <a class="menu-item" :class="{'show-menu': isShowingMenu}" @click.prevent href=""><span>Home</span></a>
+            <router-link class="menu-item" to="/" :class="{'show-menu': isShowingMenu}" @click.prevent href=""><span>Home</span></router-link>
         </li>
         <li>
-            <a class="menu-item" :class="{'show-menu': isShowingMenu}" @click.prevent href=""><span>About Company</span></a>
+            <router-link class="menu-item" to="/about" :class="{'show-menu': isShowingMenu}" @click.prevent href=""><span>About Company</span></router-link>
         </li>
         <li>
-            <a class="menu-item" :class="{'show-menu': isShowingMenu}" @click.prevent href=""><span>Contact</span></a>
+            <router-link class="menu-item" :class="{'show-menu': isShowingMenu}" @click.prevent href=""><span>Contact</span></router-link>
         </li>
 
 

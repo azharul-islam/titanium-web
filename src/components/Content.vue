@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color: white; position: relative; z-index: 10; padding-bottom: 20px;">
+    <div class="container" style="background-color: white; position: relative; z-index: 10; padding-bottom: 20px;       ">
         <div class="about-section">
             <h1 style="grid-column: 1/-1">From our labs to your home.</h1>
             <img src="../assets/innovation.png"/>
@@ -32,6 +32,7 @@
 
 <style scoped>
     .about-section {
+
         z-index: 1000;
         display: grid;
         align-items: center;

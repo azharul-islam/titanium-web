@@ -1,7 +1,7 @@
 <template>
     <div class="product-section">
         <img src="../assets/box_air_frontview_transparent.png"/>
-        <div class="button">Browse All →</div>
+        <router-link to="/catalog" class="button">Browse All →</router-link>
     </div>
 </template>
 
@@ -37,6 +37,7 @@
     }
 
     .button {
+        text-decoration: none;
         padding: 12px 22px 10px 22px;
         background-color: #42B152;
         color: white;

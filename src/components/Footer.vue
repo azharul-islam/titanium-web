@@ -23,7 +23,6 @@
         </div>
         <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
             Technologies Bangladesh Ltd. All rights reserved.</p>
-
     </div>
 </template>
 <script>
@@ -86,6 +85,8 @@
         background-repeat: no-repeat;
         color: white;
         display: grid;
+        grid-template-columns: minmax(1fr, 1000px);
+        margin: auto;
         justify-items: left;
         padding: 12px 12px 12px 22px;
         text-align: left;
