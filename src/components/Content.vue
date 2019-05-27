@@ -56,7 +56,6 @@
     p {
         grid-column: span 2;
         font-size: 17px;
-        text-align: left;
         padding: 10px 0px;
         line-height: 24px;
         margin-block-end: 0.7em;

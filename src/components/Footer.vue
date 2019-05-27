@@ -89,7 +89,6 @@
         margin: auto;
         justify-items: left;
         padding: 12px 12px 12px 22px;
-        text-align: left;
         font-family: 'product_sansregular', sans-serif;
     }
 
@@ -99,7 +98,6 @@
 
     h2 {
         font-family: Futura,Trebuchet MS,Arial,sans-serif;
-        text-align: left;
         padding: 0px 0px 0px 0px;
     }
 

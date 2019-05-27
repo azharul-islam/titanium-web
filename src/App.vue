@@ -55,17 +55,20 @@
         font-family: 'product_sansregular', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        text-align: center;
         color: #2c3e50;
     }
 
     h1 {
         font-family: Futura, Trebuchet MS, Arial, sans-serif;
-        text-align: left;
     }
 
     .container {
         max-width: 1000px;
+        margin: auto;
+    }
+
+    .text-container {
+        max-width: 700px;
         margin: auto;
     }
 
@@ -153,7 +156,7 @@
     .menu-button div {
         width: 20px;
         height: 2px;
-        background-color: black;
+        background-color: #2c3e50;
         margin: 6px 0;
 
         -webkit-transition: -webkit-transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .1008s;
@@ -188,8 +191,7 @@
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
         display: block;
-        color: #000;
-        text-align: left;
+        color: #2c3e50;
         padding: 15px 40px;
         font-size: 18px;
 

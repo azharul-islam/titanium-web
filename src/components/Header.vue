@@ -18,7 +18,7 @@
                              :duration="600"></animated-number>
             more hours of light
         </div>
-        <div class="header-text-sub linkified">Learn More →</div>
+        <router-link class="header-text-sub linkified" to="/learnmore">Learn More →</router-link>
 
 
         <div style="grid-column: 2/-1; display: grid; grid-template-columns: 70px 55px auto; grid-gap: 10px; margin: 30px 0 40px; position: relative;">
@@ -102,7 +102,8 @@
         methods: {
             formatToPrice(value) {
                 return `${value.toFixed(0)}`.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-            }
+            },
+
         }
 
     }
@@ -146,7 +147,6 @@ margin: auto;
         font-family: Futura,Trebuchet MS,Arial,sans-serif;
         font-weight: bold;
         font-size: 30px;
-        text-align: start;
         float: left;
     }
 
@@ -166,7 +166,6 @@ margin: auto;
     }
 
     .header-text-sub {
-        text-align: left;
         font-family: 'product_sansbold', Arial, sans-serif;
         margin: 8px 4px;
     }
@@ -183,6 +182,8 @@ margin: auto;
         grid-column: 3/span 4;
         text-decoration: underline;
         cursor: pointer;
+        color: #2c3e50;
+
     }
 
     /* The switch - the box around the slider */

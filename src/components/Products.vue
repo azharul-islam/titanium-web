@@ -28,7 +28,6 @@
     h1 {
         font-family: Futura,Trebuchet MS,Arial,sans-serif;
         padding: 10px 22px 5px;
-        text-align: left;
 
     }
 
