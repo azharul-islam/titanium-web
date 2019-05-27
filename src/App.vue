@@ -9,14 +9,14 @@
 
 
             <li style="margin-top: 70px" class="menu-item" :class="{'show-menu': isShowingMenu}">
-                <router-link class="nav-link" to="/">
+                <router-link class="nav-link" to="/" replace>
                     <span>Home</span></router-link>
             </li>
             <li class="menu-item" :class="{'show-menu': isShowingMenu}">
-                <router-link class="nav-link" to="/about"><span>About Company</span></router-link>
+                <router-link class="nav-link" to="/about" replace><span>About Company</span></router-link>
             </li>
             <li class="menu-item" :class="{'show-menu': isShowingMenu}">
-                <router-link class="nav-link" to="/catalog"><span>Products</span>
+                <router-link class="nav-link" to="/catalog" replace><span>Products</span>
                 </router-link>
             </li>
 
