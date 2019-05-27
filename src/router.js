@@ -21,13 +21,24 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
-
     {
       path: '/catalog',
       name: 'catalog',
       component: () => import('./views/Catalog.vue')
+    },
+    {
+      path: '/learnmore',
+      name: 'learnmore',
+      component: () => import('./views/Learn-More.vue')
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
 
 

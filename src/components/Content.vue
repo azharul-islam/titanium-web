@@ -2,6 +2,7 @@
     <div class="container" style="background-color: white; position: relative; z-index: 10; padding-bottom: 20px;       ">
         <div class="about-section">
             <h1 style="grid-column: 1/-1">From our labs to your home.</h1>
+            <p style="grid-column: 1/-1">We manufacture LED bulbs that are designed to be durable, bright and affordable.</p>
             <img src="../assets/innovation.png"/>
             <p><span class="bold-ps">We focus on the technology. </span>Our bulbs have been re-engineered from scratch
                 to
