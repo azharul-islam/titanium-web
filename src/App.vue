@@ -92,6 +92,7 @@
 
 
     .nav {
+        overflow: hidden;
         height: 50px;
         z-index: 11;
         justify-content: space-between;

@@ -129,7 +129,7 @@
 
     .header-container {
         max-width: 1000px;
-margin: auto;
+        margin: auto;
         position: relative;
         background-color: white;
         padding: 70px 0 0 0;
