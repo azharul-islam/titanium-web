@@ -21,8 +21,7 @@
                v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/email-icon.svg"/></a>
         </div>
-        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} Titanium
-            Technologies Bangladesh Ltd. All rights reserved.</p>
+        <p style="margin: 12px auto 0 auto; opacity: 0.7; font-size: 10px;">Copyright © {{currentYear}} All rights reserved.</p>
     </div>
 </template>
 <script>

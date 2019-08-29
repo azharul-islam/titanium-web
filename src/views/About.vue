@@ -1,7 +1,7 @@
 <template>
     <div class="about container">
         <h1>About Us</h1>
-        <p>Titanium Technologies was created with the aim of bringing smart and
+        <p>Titanium was created with the aim of bringing smart and
             efficient technology within the reach of everyone in the country. We are a diverse team of
             designers, engineers and technicians working together to build products tailored for use by local
             population. Harnessing the power of latest digital innovations, we believe we can change the way we
