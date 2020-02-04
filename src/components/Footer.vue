@@ -17,7 +17,7 @@
                     alt="instagram"/></a>
             <a href="tel:+8801720946060" v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/call-icon.svg"/></a>
-            <a href="mailto:info@titanium.com.bd"
+            <a href="mailto:titanium.techbd@gmail.com"
                v-bind:class="{ 'not-visible': isSocialNotVisible }"><img
                     src="../assets/footer/email-icon.svg"/></a>
         </div>
