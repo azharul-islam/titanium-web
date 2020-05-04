@@ -1,7 +1,7 @@
 <template>
     <div class="about container">
         <div class="product-grid-container">
-            <div class="product" v-for="product in products">
+            <div class="product" v-bind:key="product.model" v-for="product in products">
 
                 <img class="product-image" :src="product.imageURL" alt="Product Image">
 
@@ -10,7 +10,7 @@
                     <p class="product-spec">Frequency: {{product.frequency}}<br/>
                         Voltage: {{product.voltage}}<br/>
                         Color Temp.: {{product.colorTemp}}<br/>
-                        Luminous Flux: {{product.luminousFlux}}<br/>
+                        Luminous Flux: {{product.lumens}}<br/>
                         Lamp Size: {{product.lampSize}}<br/>
                         Base: {{product.lampBase}}<br/>
                         Life: {{product.life}}<br/>
@@ -28,121 +28,194 @@
             return {
                 products: [
                     {
-                        name: 'LED 7W Classic',
-                        imageURL: require('@/assets/bulbs/A60 B22.png'),
-                        model: 'A60 7W Classic',
-                        power: '7 WATT',
-                        frequency: '50 Hz',
+                        name: 'A55 5w Classic',
+                        imageURL: require('@/assets/bulbs/a55_5w.png'),
+                        model: 'A55 5w Classic',
+                        power: '5 watt',
+                        frequency: '50/60Hz',
+                        voltage: '85-265V AC',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
+                        cri: '>80',
+                        lampSize: '55 X 106 mm',
+                        lampBase: 'B22/E27',
+                        life: '25,000 Hours',
+                        warranty: '2 years',
+                        price: 260.00
+                    },
+                    {
+                        name: 'A55 7w Classic',
+                        imageURL: require('@/assets/bulbs/a55_7w.png'),
+                        model: 'A55 7w Classic',
+                        power: '7 watt',
+                        frequency: '50/60Hz',
                         voltage: 'AC 85-265 V',
-                        colorTemp: '6000K - 6500K',
-                        luminousFlux: '>700 LM',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '60 X 108 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '55 X 106 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
                     {
-                        name: 'LED 9W Classic',
-                        imageURL: require('@/assets/bulbs/A60 B22.png'),
-                        model: 'A60 9W Classic',
-                        power: '9 WATT',
-                        frequency: '50 Hz',
-                        voltage: 'AC 85-265 V',
-                        colorTemp: '6000K - 6500K',
-                        luminousFlux: '>900 LM',
+                        name: 'A60 9w Bulb',
+                        imageURL: require('@/assets/bulbs/a60_9w.png'),
+                        model: 'A60 9w Bulb',
+                        power: '12 watt',
+                        frequency: '50/60Hz',
+                        voltage: 'AC 110-265 V',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '60 X 108 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '60 X 113 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
                     {
-                        name: 'LED 12W Classic',
-                        imageURL: require('@/assets/bulbs/A65 B22.png'),
-                        model: 'A60 12W Classic',
-                        power: '12 WATT',
-                        frequency: '50 Hz',
+                        name: 'A65 12w Classic',
+                        imageURL: require('@/assets/bulbs/a65_12w.png'),
+                        model: 'A65 12w Blue',
+                        power: '15 watt',
+                        frequency: '50/60Hz',
+                        voltage: 'AC 110-265 V',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
+                        cri: '>80',
+                        lampSize: '65 X 123 mm',
+                        lampBase: 'B22/E27',
+                        life: '25,000 Hours',
+                        warranty: '2 years',
+                        price: 260.00
+                    },
+                    {
+                        name: 'A65 12w Blue',
+                        imageURL: require('@/assets/bulbs/a65_Blue_12W.png'),
+                        model: 'A65 12w Blue',
+                        power: '15 watt',
+                        frequency: '50/60Hz',
                         voltage: 'AC 110-265 V',
                         colorTemp: '6000K - 6500K',
-                        luminousFlux: '>1200 LM',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '60 X 123 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '65 X 123 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
                     {
-                        name: 'LED 15W Classic',
-                        imageURL: require('@/assets/bulbs/A70 B22.png'),
-                        model: 'A70 15W Classic',
-                        power: '15 WATT',
-                        frequency: '50 Hz',
+                        name: 'A65 12w Green',
+                        imageURL: require('@/assets/bulbs/a65_Green_12W.png'),
+                        model: 'A65 12w Green',
+                        power: '18 watt',
+                        frequency: '50/60Hz',
                         voltage: 'AC 110-265 V',
                         colorTemp: '6000K - 6500K',
-                        luminousFlux: '>1500 LM',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '70 X 135 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '65 X 123 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
                     {
-                        name: 'LED 18W Classic',
-                        imageURL: require('@/assets/bulbs/A80 B22.png'),
-                        model: 'A80 18W Classic',
-                        power: '18 WATT',
-                        frequency: '50 Hz',
+                        name: 'A70 15w Classic',
+                        imageURL: require('@/assets/bulbs/a70_15W.png'),
+                        model: 'A70 15w Classic',
+                        power: '16 watt',
+                        frequency: '50/60Hz',
                         voltage: 'AC 110-265 V',
-                        colorTemp: '6000K - 6500K',
-                        luminousFlux: '>1900 LM',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '80 X 147 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '70 X 134 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
                     {
-                        name: 'LED 16W Classic',
-                        imageURL: require('@/assets/bulbs/A65 B22.png'),
-                        model: 'ED75 16W Classic',
-                        power: '16 WATT',
-                        frequency: '50 Hz',
+                        name: 'A80 18w Classic',
+                        imageURL: require('@/assets/bulbs/a80_18w.png'),
+                        model: 'A80 18w Classic',
+                        power: '27 watt',
+                        frequency: '50/60Hz',
                         voltage: 'AC 110-265 V',
-                        colorTemp: '6000K - 6500K',
-                        luminousFlux: '>1520 LM',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '75 X 180 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '80 X 154 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
                     {
-                        name: 'LED 27W Classic',
-                        imageURL: require('@/assets/bulbs/A80 B22.png'),
-                        model: 'ED90 27W Classic',
-                        power: '27 WATT',
-                        frequency: '50 Hz',
+                        name: 'C37 3-5w Candle',
+                        imageURL: require('@/assets/bulbs/c37_3-5W.png'),
+                        model: 'C37 3-5w Candle',
+                        power: '30 watt',
+                        frequency: '50/60Hz',
                         voltage: 'AC 110-265 V',
-                        colorTemp: '6000K - 6500K',
-                        luminousFlux: '>2565 LM',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
                         cri: '>80',
-                        lampSize: '90 X 210 mm',
-                        driver: 'Non-isolated',
+                        lampSize: '37 X 100 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
+                        warranty: '2 years',
+                        price: 260.00
+                    },
+                    {
+                        name: 'T100 30w Bulb',
+                        imageURL: require('@/assets/bulbs/t30W.png'),
+                        model: 'T100 30w Bulb',
+                        power: '30 watt',
+                        frequency: '50/60Hz',
+                        voltage: 'AC 110-265 V',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
+                        cri: '>80',
+                        lampSize: '100 X 180 mm',
+                        lampBase: 'B22/E27',
+                        life: '20,000 Hours',
+                        warranty: '2 years',
+                        price: 260.00
+                    },
+                    {
+                        name: 'T115 40w Bulb',
+                        imageURL: require('@/assets/bulbs/t40W.png'),
+                        model: 'T115 40w Bulb',
+                        power: '30 watt',
+                        frequency: '50/60Hz',
+                        voltage: 'AC 110-265 V',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
+                        cri: '>80',
+                        lampSize: '115 X 190 mm',
+                        lampBase: 'B22/E27',
+                        life: '20,000 Hours',
+                        warranty: '2 years',
+                        price: 260.00
+                    },
+                    {
+                        name: 'T125 50w Bulb',
+                        imageURL: require('@/assets/bulbs/t50W.png'),
+                        model: 'T125 50w Bulb',
+                        power: '30 watt',
+                        frequency: '50/60Hz',
+                        voltage: 'AC 110-265 V',
+                        colorTemp: '6000-6500K',
+                        lumens: '> 100/W',
+                        cri: '>80',
+                        lampSize: '125 X 215 mm',
+                        lampBase: 'B22/E27',
+                        life: '20,000 Hours',
                         warranty: '2 years',
                         price: 260.00
                     },
@@ -165,7 +238,7 @@
     .product-image {
         display: inline-block;
         height: 100%;
-        max-width: 80px;
+        max-width: 120px;
         margin-bottom: 16px;
         object-fit: contain;
     }
@@ -177,7 +250,7 @@
 
     .product-grid-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-gap: 10px;
     }
 
