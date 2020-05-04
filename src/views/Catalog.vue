@@ -93,7 +93,7 @@
                     },
                     {
                         name: 'A65 12w Blue',
-                        imageURL: require('../assets/bulbs/a65_Blue_12W.png'),
+                        imageURL: require('../assets/bulbs/a65_blue_12W.png'),
                         model: 'A65 12w Blue',
                         power: '15 watt',
                         frequency: '50/60Hz',
@@ -109,7 +109,7 @@
                     },
                     {
                         name: 'A65 12w Green',
-                        imageURL: require('../assets/bulbs/a65_Green_12W.png'),
+                        imageURL: require('../assets/bulbs/a65_green_12W.png'),
                         model: 'A65 12w Green',
                         power: '18 watt',
                         frequency: '50/60Hz',
@@ -157,7 +157,7 @@
                     },
                     {
                         name: 'C37 3-5w Candle',
-                        imageURL: require('../assets/bulbs/c37_3-5W.png'),
+                        imageURL: require('../assets/bulbs/c37_3_5W.png'),
                         model: 'C37 3-5w Candle',
                         power: '30 watt',
                         frequency: '50/60Hz',
