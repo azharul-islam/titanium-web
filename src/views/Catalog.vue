@@ -29,7 +29,7 @@
                 products: [
                     {
                         name: 'A55 5w Classic',
-                        imageURL: require('../assets/bulbs/a55_5w.png'),
+                        imageURL: require('../assets/bulbs/a55-5w.png'),
                         model: 'A55 5w Classic',
                         power: '5 watt',
                         frequency: '50/60Hz',
@@ -45,7 +45,7 @@
                     },
                     {
                         name: 'A55 7w Classic',
-                        imageURL: require('../assets/bulbs/a55_7w.png'),
+                        imageURL: require('../assets/bulbs/a55-7w.png'),
                         model: 'A55 7w Classic',
                         power: '7 watt',
                         frequency: '50/60Hz',
@@ -61,7 +61,7 @@
                     },
                     {
                         name: 'A60 9w Bulb',
-                        imageURL: require('../assets/bulbs/a60_9w.png'),
+                        imageURL: require('../assets/bulbs/a60-9w.png'),
                         model: 'A60 9w Bulb',
                         power: '9 watt',
                         frequency: '50/60Hz',
@@ -77,7 +77,7 @@
                     },
                     {
                         name: 'A65 12w Classic',
-                        imageURL: require('../assets/bulbs/a65_12w.png'),
+                        imageURL: require('../assets/bulbs/a65-12w.png'),
                         model: 'A65 12w Blue',
                         power: '12 watt',
                         frequency: '50/60Hz',
@@ -125,7 +125,7 @@
                     },
                     {
                         name: 'A70 15w Classic',
-                        imageURL: require('../assets/bulbs/a70_15W.png'),
+                        imageURL: require('../assets/bulbs/a7015W.png'),
                         model: 'A70 15w Classic',
                         power: '15 watt',
                         frequency: '50/60Hz',
@@ -141,7 +141,7 @@
                     },
                     {
                         name: 'A80 18w Classic',
-                        imageURL: require('../assets/bulbs/a80_18w.png'),
+                        imageURL: require('../assets/bulbs/a8018w.png'),
                         model: 'A80 18w Classic',
                         power: '18 watt',
                         frequency: '50/60Hz',
@@ -157,7 +157,7 @@
                     },
                     {
                         name: 'C37 3-5w Candle',
-                        imageURL: require('../assets/bulbs/c37_3_5W.png'),
+                        imageURL: require('../assets/bulbs/c373to5W.png'),
                         model: 'C37 3-5w Candle',
                         power: '3-5 watt',
                         frequency: '50/60Hz',
