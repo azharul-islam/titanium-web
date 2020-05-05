@@ -10,7 +10,7 @@
                     <p class="product-spec">Frequency: {{product.frequency}}<br/>
                         Voltage: {{product.voltage}}<br/>
                         Color Temp.: {{product.colorTemp}}<br/>
-                        Luminous Flux: {{product.lumens}}<br/>
+                        Lumens: {{product.lumens}}<br/>
                         Lamp Size: {{product.lampSize}}<br/>
                         Base: {{product.lampBase}}<br/>
                         Life: {{product.life}}<br/>
