@@ -7,14 +7,20 @@
 
                 <div class="product-details">
                     <h2 class="product-title">{{product.name}}</h2>
-                    <p class="product-spec">Frequency: {{product.frequency}}<br/>
-                        Voltage: {{product.voltage}}<br/>
-                        Color Temp.: {{product.colorTemp}}<br/>
-                        Lumens: {{product.lumens}}<br/>
-                        Lamp Size: {{product.lampSize}}<br/>
-                        Base: {{product.lampBase}}<br/>
-                        Life: {{product.life}}<br/>
-                        Warranty: {{product.warranty}}</p>
+                    <span v-if="product.frequency" class="product-spec">Frequency: {{product.frequency}}<br></span>
+                    <span v-if="product.model" class="product-spec">Model: {{product.model}}<br></span>
+                    <span v-if="product.voltage" class="product-spec">Voltage: {{product.voltage}}<br></span>
+                    <span v-if="product.colorTemp" class="product-spec">Color Temp.: {{product.colorTemp}}<br></span>
+                    <span v-if="product.lumens" class="product-spec">Lumens: {{product.lumens}}<br></span>
+                    <span v-if="product.lampSize" class="product-spec">Lamp Size: {{product.lampSize}}<br></span>
+                    <span v-if="product.lampBase" class="product-spec">Base: {{product.lampBase}}<br></span>
+                    <span v-if="product.life" class="product-spec">Life: {{product.life}}<br></span>
+                    <span v-if="product.warranty" class="product-spec">Warranty: {{product.warranty}}<br></span>
+                    <span v-if="product.stabilizerPhase" class="product-spec">{{product.stabilizerPhase}}<br></span>
+                    <span v-if="product.stabilizerType" class="product-spec">{{product.stabilizerType}}<br></span>
+                    <span v-if="product.application" class="product-spec">Application: {{product.application}}<br></span>
+<!--                    <span v-if="product.stabilizerFeatures" class="product-spec">{{product.stabilizerFeatures}}<br></span>-->
+<!--                    <span v-if="product.stabilizerMainSpecs" class="product-spec">{{product.stabilizerMainSpecs}}<br></span>-->
                 </div>
             </div>
         </div>
@@ -168,7 +174,7 @@
                         lampSize: '37 X 100 mm',
                         lampBase: 'B22/E27',
                         life: '25,000 Hours',
-                        warranty: '2 years',
+                        warranty: '1 years',
                         price: 260.00
                     },
                     {
@@ -184,7 +190,7 @@
                         lampSize: '100 X 180 mm',
                         lampBase: 'B22/E27',
                         life: '20,000 Hours',
-                        warranty: '2 years',
+                        warranty: '1 years',
                         price: 260.00
                     },
                     {
@@ -200,7 +206,7 @@
                         lampSize: '115 X 190 mm',
                         lampBase: 'B22/E27',
                         life: '20,000 Hours',
-                        warranty: '2 years',
+                        warranty: '1 years',
                         price: 260.00
                     },
                     {
@@ -216,8 +222,77 @@
                         lampSize: '125 X 215 mm',
                         lampBase: 'B22/E27',
                         life: '20,000 Hours',
-                        warranty: '2 years',
+                        warranty: '1 years',
                         price: 260.00
+                    },
+                    {
+                        name: 'AC Automatic Voltage Regulator',
+                        imageURL: require('../assets/voltage-stabilizers/PC-SVC-3kVA.jpg'),
+                        model: 'PC-SVC-3kVA',
+                        stabilizerPhase: 'Single Phase / 3000VA',
+                        stabilizerType: 'Servo Type',
+                        application: 'Home & Office, especially for Air Conditioner',
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
+                    },
+                    {
+                        name: 'AC Automatic Voltage Regulator',
+                        imageURL: require('../assets/voltage-stabilizers/PC-SVC-5kVA.jpg'),
+                        model: 'PC-SVC-5kVA',
+                        stabilizerPhase: 'Single Phase / 5000VA',
+                        stabilizerType: 'Servo Type',
+                        application: 'Home & Office, especially for Air Conditioner',
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
+                    },
+                    {
+                        name: 'AC Automatic Voltage Regulator',
+                        imageURL: require('../assets/voltage-stabilizers/PC-SVC-10kVA.jpg'),
+                        model: 'PC-SVC-10kVA',
+                        stabilizerPhase: 'Single Phase / 10KVA',
+                        stabilizerType: 'Servo Type',
+                        application: 'Home & Office, especially for Air Conditioner',
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
+                    },
+                    {
+                        name: 'AC Automatic Voltage Regulator',
+                        imageURL: require('../assets/voltage-stabilizers/TMB95-10kVA.jpg'),
+                        model: 'TMB95-10kVA',
+                        stabilizerPhase: 'Single Phase / 10KVA',
+                        stabilizerType: 'Relay Type',
+                        application: 'Home & Office, especially for Air Conditioner',
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
+                    },
+                    {
+                        name: 'AC Automatic Voltage Regulator',
+                        imageURL: require('../assets/voltage-stabilizers/TMB95-5000VA.jpg'),
+                        model: 'TMB95-5kVA',
+                        stabilizerPhase: 'Single Phase / 5000VA',
+                        stabilizerType: 'Relay Type',
+                        application: 'Home & Office, especially for Air Conditioner',
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
+                    },
+                    {
+                        name: 'AC Automatic Voltage Regulator',
+                        imageURL: require('../assets/voltage-stabilizers/TMB95-3000VA.jpg'),
+                        model: 'TMB95-3kVA',
+                        stabilizerPhase: 'Single Phase / 3000VA',
+                        stabilizerType: 'Relay Type',
+                        application: 'Home & Office, especially for Air Conditioner',
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
+                    },
+                    {
+                        name: 'Motor Protector/Motor Starter',
+                        imageURL: require('../assets/voltage-stabilizers/PUMPCTRL.jpg'),
+                        model: 'MP-M3',
+                        stabilizerPhase: 'Three Phase/Dol Start',
+                        application: "Auto Start & protection for three phase pump motor",
+                        stabilizerFeatures: "Over Voltage, Over Load, Over Heat, Short Circuit, Surge Protection\nWide Input Voltage Range\nIntelligent Auto Cooling Fan\nLED Digital Display",
+                        stabilizerMainSpecs: "Input Voltage: AC 100-260V/50Hz\nOutput Voltage: AC 220V+-3%/ 50Hz\nOutput Power: 3000VA",
                     },
 
                 ],
@@ -229,11 +304,9 @@
 </script>
 <style lang="scss" scoped>
     .about {
-        padding: 70px 24px 0;
+        padding: 62px 16px 16px;
         background-color: #ededed;
-
     }
-
 
     .product-image {
         display: inline-block;
@@ -251,7 +324,7 @@
     .product-grid-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        grid-gap: 10px;
+        grid-gap: 2px;
     }
 
     .product-grid-container p {
@@ -261,7 +334,6 @@
     .product {
         display: flex;
         height: 220px;
-        border-radius: 5px;
         grid-column: auto;
         padding: 16px;
         background-color: rgb(255, 255, 255);
