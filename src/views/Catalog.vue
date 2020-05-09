@@ -304,7 +304,7 @@
 </script>
 <style lang="scss" scoped>
     .about {
-        padding: 62px 16px 16px;
+        padding-top: 46px;
         background-color: #ededed;
     }
 
@@ -324,7 +324,7 @@
     .product-grid-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        grid-gap: 2px;
+        grid-gap: 1.5px;
     }
 
     .product-grid-container p {
@@ -333,9 +333,9 @@
 
     .product {
         display: flex;
-        height: 220px;
+        height: 225px;
         grid-column: auto;
-        padding: 16px;
+        padding: 16px 32px;
         background-color: rgb(255, 255, 255);
     }
 
